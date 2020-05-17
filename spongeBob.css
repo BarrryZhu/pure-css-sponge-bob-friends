@@ -1,0 +1,326 @@
+.spongebob-face {
+    position: relative;
+    background: #FDDB21;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spongebob-face .eye-group {
+    width: 320px;
+    height: 160px;
+    position: relative;
+}
+
+.spongebob-face .eye {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: white;
+    border-radius: 80px;
+    border: 5px solid black;
+    -webkit-animation: blink forwards infinite 6s ease-in-out;
+    animation: blink forwards infinite 6s ease-in-out;
+}
+
+.spongebob-face .eye::before {
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    background: #0099FF;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
+.spongebob-face .eye::after {
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    background: black;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-radius: 15px;
+}
+
+.spongebob-face .eye-left {
+    left: 0;
+    top: 0;
+}
+
+.spongebob-face .eye-right {
+    right: 0;
+    top: 0;
+}
+
+.spongebob-face .eyelash,
+.spongebob-face .eyelash::before,
+.spongebob-face .eyelash::after {
+    position: absolute;
+    background: black;
+    height: 50px;
+    width: 10px;
+}
+
+.spongebob-face .eyelash-left {
+    left: 50%;
+    margin-left: -5px;
+    top: 0;
+    margin-top: -50px;
+}
+
+.spongebob-face .eyelash-right {
+    right: 50%;
+    margin-right: -5px;
+    top: 0;
+    margin-top: -50px;
+}
+
+.spongebob-face .eyelash::before,
+.spongebob-face .eyelash::after {
+    content: '';
+    transform-origin: 50% 100%;
+}
+
+.spongebob-face .eyelash::before {
+    transform: rotate(-20deg) translate(-50px, -5px);
+}
+
+.spongebob-face .eyelash::after {
+    transform: rotate(20deg) translate(50px, 0px);
+}
+
+.spongebob-face .nose-group {
+    position: relative;
+    height: 50px;
+    width: 60px;
+}
+
+.spongebob-face .nose {
+    position: absolute;
+    height: 120px;
+    width: 60px;
+    background: #FDDB21;
+    border: 5px solid black;
+    top: 0;
+    margin-top: -70px;
+    border-radius: 60px / 120px;
+}
+
+.spongebob-face .nose::after {
+    position: absolute;
+    content: '';
+    height: 60px;
+    width: 60px;
+    background: #FDDB21;
+    top: 70%;
+    margin-top: -5px;
+    left: 0;
+    margin-left: -10px;
+    transform: rotate(40deg);
+}
+
+.spongebob-face .cheek-group {
+    width: 320px;
+    position: relative;
+}
+
+.spongebob-face .cheek {
+    position: absolute;
+    top: 0;
+    margin-top: -100px;
+    height: 80px;
+    width: 80px;
+    background: #FDDB21;
+    border: 5px solid #D73C13;
+    border-radius: 40px;
+}
+
+.spongebob-face .cheek::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    background: #FDDB21;
+    border-radius: 40px;
+}
+
+.spongebob-face .cheek-left {
+    left: 0;
+}
+
+.cheek-right {
+    right: 0;
+}
+
+.spongebob-face .freckle,
+.spongebob-face .freckle::before,
+.spongebob-face .freckle::after {
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    top: 10%;
+    height: 10px;
+    width: 10px;
+    background: #D73C13;
+    border-radius: 5px;
+}
+
+.spongebob-face .freckle::before {
+    content: '';
+    transform: translate(20px, 10px);
+}
+
+.spongebob-face .freckle::after {
+    content: '';
+    transform: translate(-20px, 10px);
+}
+
+.spongebob-face .mouth-group {
+    position: relative;
+    width: 320px;
+    height: 120px;
+}
+
+.spongebob-face .mouth {
+    position: absolute;
+    width: 240px;
+    height: 30px;
+    border: 5px solid black;
+    left: 50%;
+    margin-left: -120px;
+    top: 0;
+    margin-top: -20px;
+    border-radius: 50% /0 0 30px 30px;
+    border-top: none;
+}
+
+.spongebob-face .mouth::before,
+.spongebob-face .mouth::after {
+    position: absolute;
+    top: 0;
+    content: '';
+    background: white;
+    border-top: 5px solid #FDDB21;
+    border-bottom: 5px solid #FDDB21;
+    height: 20px;
+}
+
+.spongebob-face .mouth::before {
+    left: 0;
+    border-left: 5px solid black;
+    border-right: 5px transparent;
+    transform: rotate(30deg) translate(-12px, -8px);
+}
+
+.spongebob-face .mouth::after {
+    right: 0;
+    border-right: 5px solid black;
+    border-left: 5px transparent;
+    transform: rotate(-30deg) translate(12px, -8px);
+}
+
+.spongebob-face .teeth {
+    position: absolute;
+    top: 0;
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    background: white;
+    border: 5px solid black;
+    border-radius: 5px;
+    border-top: transparent;
+}
+
+.spongebob-face .teeth-left {
+    left: 50%;
+    margin-left: -50px;
+    transform: rotate(5deg);
+}
+
+.spongebob-face .teeth-right {
+    right: 50%;
+    margin-right: -50px;
+    transform: rotate(-5deg);
+}
+
+.spongebob-face .jaw {
+    position: relative;
+    width: 320px;
+}
+
+.spongebob-face .jaw::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    border: 5px solid #D73C13;
+    left: 50%;
+    margin-left: -20px;
+    top: 0;
+    margin-top: -20px;
+    border-radius: 50% /0 0 25px 25px;
+    border-top: none;
+}
+
+.spongebob-face .jaw::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    border: 5px solid #D73C13;
+    right: 50%;
+    margin-right: 15px;
+    top: 50%;
+    margin-top: -20px;
+    border-radius: 50% /0 0 15px 15px;
+    border-top: none;
+}
+
+@-webkit-keyframes blink {
+
+    0%,
+    2%,
+    60%,
+    62%,
+    100% {
+        -webkit-transform: scaleX(1) scaleY(1);
+        transform: scaleX(1) scaleY(1);
+    }
+
+    1%,
+    61% {
+        -webkit-transform: scaleX(1.5) scaleY(0.1);
+        transform: scaleX(1.5) scaleY(0.1);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    2%,
+    60%,
+    62%,
+    100% {
+        -webkit-transform: scaleX(1) scaleY(1);
+        transform: scaleX(1) scaleY(1);
+    }
+
+    1%,
+    61% {
+        -webkit-transform: scaleX(1.5) scaleY(0.1);
+        transform: scaleX(1.5) scaleY(0.1);
+    }
+}
